@@ -1,8 +1,10 @@
 package application;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Group;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCombination;
@@ -17,11 +19,20 @@ public class Main extends Application {
 
 	@Override
 	public void start(Stage mainStage) throws Exception {
+		try {
+		Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
 		Stage stage1 = new Stage();
-		Group root = new Group();// grupo de nodos
-		Scene scene1 = new Scene(root,600,600, Color.ALICEBLUE);
+		Scene scene1 = new Scene(root, Color.ALICEBLUE);
 		
-		Text text=new Text();
+	
+		
+		stage1.setScene(scene1);
+		stage1.show();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		/*Text text=new Text();
 		text.setText("Just Playing around");
 		text.setX(50);
 		text.setY(50);
@@ -45,10 +56,7 @@ public class Main extends Application {
 		root.getChildren().add(rectangle);
 		root.getChildren().add(text);
 		root.getChildren().add(line);
-		
-		stage1.setScene(scene1);
-		stage1.show();
-
+		*/
 		/*
 		 * Image icon = new Image("Maybe a tatto.jfif"); stage1.getIcons().add(icon);
 		 * stage1.setTitle("Playground w00tw005"); stage1.setScene(scene1);
