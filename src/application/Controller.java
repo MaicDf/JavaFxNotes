@@ -5,8 +5,8 @@ import javafx.fxml.FXML;
 import javafx.scene.shape.Circle;
 
 public class Controller {
-	@FXML // inject values in the fxMl loader here. Es necesaria para acceder a elementos
-			// privados del archivo FXML
+	@FXML // inject values in the fxMl loader here. Es necesaria para acceder a elementos privados
+			
 	private Circle myCircle;
 	private double x;
 	private double y;

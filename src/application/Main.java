@@ -20,10 +20,11 @@ public class Main extends Application {
 	@Override
 	public void start(Stage mainStage) throws Exception {
 		try {
-		Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("scene1.fxml"));
 		Stage stage1 = new Stage();
 		Scene scene1 = new Scene(root, Color.ALICEBLUE);
-		
+		String css = this.getClass().getResource("application.css").toExternalForm();
+		scene1.getStylesheets().add(css);	//link css
 	
 		
 		stage1.setScene(scene1);
